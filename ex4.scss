@@ -1,0 +1,59 @@
+body
+{
+    width: 100vw;
+    height: 100vh;
+}
+
+#parent
+{
+    width: 100vw; 
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    #agenda
+    {
+        height: 40vh;
+        width: 28vh;
+        border: 1px solid black;
+        overflow: hidden;
+        border-radius: 10%;
+        margin-right: 2vw;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 20% 1fr 20%;
+        #name_day, #year, #day_month
+        {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #name_day, #year
+        {
+            background-color: red;
+            font-size: 4vw;
+        }
+        #name_day
+        {
+            grid-area: 1 / 1 / 2 / 2;
+        }
+        #day_month
+        {
+            text-align: center;
+            font-size: 6vw;
+            grid-area: 2 / 1 / 3 / 2;
+        }
+        #year
+        {
+            grid-area: 3 / 1 / 4 / 2;
+        }
+    }
+    #time
+    {
+        font-size: 8vw;
+        #second
+        {
+            font-size: 5vw;
+        }
+    }
+}
